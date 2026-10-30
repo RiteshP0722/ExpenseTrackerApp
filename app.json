@@ -23,7 +23,17 @@
       "bundleIdentifier": "com.acmetraders.expensetracker",
       "supportsTablet": false
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Expense Tracker to choose a bill photo from your gallery.",
+          "cameraPermission": "Allow Expense Tracker to take a photo of the bill."
+        }
+      ]
+    ],
     "extra": {
       "router": {
         "origin": false

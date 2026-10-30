@@ -1,0 +1,242 @@
+/**
+ * Every piece of text shown in the app lives here, so a Hindi
+ * version can be added later by swapping this object.
+ * Placeholders like {count} are filled with `fill()` below.
+ */
+export const strings = {
+  appName: "Expense Tracker",
+  companyName: "Acme Traders",
+  dailyExpenses: "Daily Expenses",
+
+  // Tabs
+  home: "Home",
+  summary: "Summary",
+  admin: "Admin",
+
+  // Common
+  loading: "Loading...",
+  retry: "Try again",
+  cancel: "Cancel",
+  close: "Close",
+  save: "Save Expense",
+  saveChanges: "Save Changes",
+  edit: "Edit",
+  delete: "Delete",
+  remove: "Remove",
+  add: "Add",
+  yes: "Yes",
+  search: "Search",
+  all: "All",
+  you: "You",
+  logout: "Log out",
+  logoutConfirm: "Do you want to log out?",
+
+  // Errors
+  errorGeneric: "Something went wrong. Please try again.",
+  errorOffline: "No internet connection. Check your network and try again.",
+  errorPermission: "You are not allowed to do this.",
+  errorTimeWindow: "This entry can no longer be changed (only within 24 hours).",
+  errorDuplicateItem: "An item with this name already exists.",
+  errorNotConfigured:
+    "The app is not set up yet. Add EXPO_PUBLIC_SUPABASE_URL and EXPO_PUBLIC_SUPABASE_ANON_KEY to the .env file and restart.",
+  offlineBanner: "You are offline. Changes cannot be saved right now.",
+  adminsOnly: "Only the admin can open this page.",
+
+  // Login
+  mobileNumber: "Mobile Number",
+  mobilePlaceholder: "10-digit mobile number",
+  sendOtp: "Send OTP",
+  sendOtpWait: "Send OTP again in {seconds}s",
+  enterOtpFor: "Enter OTP sent to {phone}",
+  otpPlaceholder: "6-digit OTP",
+  verifyLogin: "Verify & Login",
+  changeNumber: "Change number",
+  phoneInvalid: "Enter a valid 10-digit mobile number",
+  otpInvalid: "Enter the 6-digit OTP you received",
+  otpWrong: "Wrong or expired OTP. Please try again.",
+  otpSendFailed: "Could not send OTP. Please try again.",
+  otpProviderError:
+    "Could not send the SMS. The SMS settings in Supabase need to be checked (or add this number as a test number).",
+  otpTooMany: "Too many tries. Please wait a minute and try again.",
+  notRegisteredTitle: "Number not registered",
+  notRegisteredBody:
+    "Your number {phone} is not added to this company yet. Ask the admin to add you, then tap Check again.",
+  checkAgain: "Check again",
+
+  // Home
+  hello: "Hello, {name}",
+  thisMonth: "This month",
+  entriesCount: "{count} entries",
+  byItem: "By item",
+  byCategory: "By category",
+  byPerson: "By person",
+  recent: "Recent",
+  seeAll: "See all",
+  emptyExpenses: "No expenses yet. Tap + Add Expense to get started.",
+  emptyPeriod: "No expenses in this period.",
+
+  // Add / edit expense
+  addExpense: "Add Expense",
+  editExpense: "Edit Expense",
+  item: "Item",
+  chooseItem: "Choose item",
+  searchItems: "Search items",
+  otherName: "What was it?",
+  otherNamePlaceholder: "e.g. Bulb",
+  requestNewItem: "Request new item",
+  requestItemTitle: "Request a new item",
+  requestItemHelp: "The admin will add it to the list. For now, save this expense as Other.",
+  requestSend: "Send request",
+  requestSent: "Request sent. This expense is saved as Other for now.",
+  amount: "Amount",
+  category: "Category",
+  date: "Date",
+  today: "Today",
+  yesterday: "Yesterday",
+  addedBy: "Added by",
+  note: "Note (optional)",
+  notePlaceholder: "e.g. for staff tea",
+  saving: "Saving...",
+  saved: "Expense saved",
+
+  // Validation
+  itemRequired: "Choose an item",
+  otherNameRequired: "Type what you bought (2 to 60 letters)",
+  amountRequired: "Enter the amount",
+  amountInvalid: "Enter a valid amount, like 120 or 45.50",
+  amountPositive: "Amount must be more than 0",
+  amountDecimals: "Use at most 2 digits after the dot",
+  amountTooLarge: "Amount is too large",
+  noteTooLong: "Note can be at most 200 letters",
+  dateRequired: "Choose a date",
+  dateFuture: "Date cannot be in the future",
+  nameRequired: "Enter a name (1 to 60 letters)",
+  itemNameInvalid: "Item name must be 2 to 60 letters",
+
+  // Bill photo
+  attachBill: "Attach bill photo",
+  billPhoto: "Bill photo",
+  takePhoto: "Take photo",
+  chooseFromGallery: "Choose from gallery",
+  changePhoto: "Change photo",
+  removePhoto: "Remove photo",
+  viewPhoto: "Tap to view",
+  cameraDenied: "Camera permission is needed to take a bill photo.",
+  galleryDenied: "Gallery permission is needed to choose a bill photo.",
+  photoUploadFailed: "Could not upload the bill photo. Please try again.",
+  photoLoadFailed: "Could not load the photo.",
+  noPhoto: "No bill photo",
+
+  // Expense detail
+  expenseDetails: "Expense details",
+  deleteConfirmTitle: "Delete this expense?",
+  deleteConfirmBody: "{name} — {amount}. This cannot be undone.",
+  editWindowOver: "Entries can be changed only within 24 hours. Ask the admin.",
+  deleted: "Expense deleted",
+
+  // Summary
+  totalFor: "Total · {period}",
+  monthTotal: "Month total",
+  previousMonth: "Previous month",
+  nextMonth: "Next month",
+  month: "Month",
+  dateRange: "Date range",
+  from: "From",
+  to: "To",
+  rangeInvalid: "'From' date must be before 'To' date",
+  shareWhatsApp: "Share on WhatsApp",
+  shareOther: "Share",
+  exportExcel: "Export to Excel",
+  exporting: "Preparing file...",
+  exportEmpty: "There are no entries to export in this period.",
+  sharingUnavailable: "Sharing is not available on this device.",
+  itemEntriesTitle: "{name} entries",
+
+  // WhatsApp / Excel text
+  waTitle: "*{company} — Expenses*",
+  waTotal: "Total: {amount} ({count} entries)",
+  waByItem: "By item:",
+  waByCategory: "By category:",
+  waByPerson: "By person:",
+  waLine: "{name}: {amount}",
+  excelHeaders: ["Date", "Item", "Category", "Amount", "Added by", "Note"],
+  excelTotal: "Total",
+  excelSheet: "Expenses",
+  excelFilePrefix: "Expenses",
+
+  // Entries list
+  allEntries: "All entries",
+  myEntries: "My entries",
+  searchPlaceholder: "Search item, note or person",
+  filterCategory: "Category",
+  filterItem: "Item",
+  filterPerson: "Person",
+  clearFilters: "Clear filters",
+  showingFirst: "Showing the first {count} entries. Narrow the filters to see more.",
+
+  // Admin
+  adminArea: "Admin",
+  staff: "Staff",
+  staffHelp: "Only numbers in this list can log in.",
+  addStaff: "Add staff",
+  staffName: "Name",
+  staffNamePlaceholder: "e.g. Ramesh",
+  role: "Role",
+  roleStaff: "Staff",
+  roleAdmin: "Admin",
+  joined: "Logged in",
+  notJoined: "Not logged in yet",
+  removeStaffTitle: "Remove {name}?",
+  removeStaffBody: "{phone} will no longer be able to use the app. Their old entries stay.",
+  cannotRemoveSelf: "You cannot remove yourself.",
+  items: "Items",
+  itemsHelp: "Staff choose from this list. Names are kept in one style (Milk, not milk).",
+  addItem: "Add item",
+  itemName: "Item name",
+  itemNamePlaceholder: "e.g. Bread",
+  defaultCategory: "Default category",
+  active: "Active",
+  disabled: "Disabled",
+  disableItem: "Disable",
+  enableItem: "Enable",
+  renameItem: "Edit item",
+  itemRequests: "Item requests",
+  noRequests: "No pending requests.",
+  requestedBy: "Requested by {name}",
+  approve: "Approve",
+  reject: "Reject",
+  approved: "Item added",
+  emptyStaff: "No staff added yet.",
+  emptyItems: "No items yet.",
+
+  // Months (for labels; translate later)
+  monthsLong: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+
+  categories: {
+    Food: "Food",
+    Travel: "Travel",
+    Stationery: "Stationery",
+    Other: "Other",
+  },
+} as const;
+
+/** fill("Hello {name}", { name: "Asha" }) -> "Hello Asha" */
+export function fill(template: string, values: Record<string, string | number>): string {
+  return template.replace(/\{(\w+)\}/g, (match, key: string) =>
+    key in values ? String(values[key]) : match,
+  );
+}

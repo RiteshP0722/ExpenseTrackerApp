@@ -13,3 +13,4 @@ npm-debug.*
 web-build/
 .env
 .DS_Store
+coverage/
